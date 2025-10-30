@@ -114,7 +114,7 @@ When working with AI assistants (GitHub Copilot, Claude, etc.):
 2. **Use assessment tools**:
    - Reference the checklist at the end of `prompts/implementation.md` for a self-check.
    - Ask the AI assistant to assess your prompt.
-   ```
+   ```markdown
    "Please assess my prompt against .github/assessment/prompt-assessment.md:
    [INSERT PROMPT]
    "
