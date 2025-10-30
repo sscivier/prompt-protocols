@@ -1,3 +1,7 @@
+## Disclaimer
+
+This reference document was formed by taking large excerpts from the paper "Ten Simple Rules for AI-Assisted Coding in Science" by Eric W. Bridgeford, Iain Campbell, Zijiao Chen, Zhicheng Lin, Harrison Ritz, Joachim Vandekerckhove, and Russell A. Poldrack. The original paper provides comprehensive discussion, references, and appendices.
+
 # (An Abbreviated Version of) Ten Simple Rules for AI-Assisted Coding in Science
 
 ## Introduction
@@ -94,10 +98,6 @@ We also anticipate substantial evolution in how scientists acknowledge the role 
 
 ## Acknowledgments
 
-This reference document was formed by taking large excerpts from the paper "Ten Simple Rules for AI-Assisted Coding in Science" by Eric W. Bridgeford, Iain Campbell, Zijiao Chen, Zhicheng Lin, Harrison Ritz, Joachim Vandekerckhove, and Russell A. Poldrack. The original paper provides comprehensive discussion, references, and worked examples demonstrating both effective and ineffective implementations of each rule.
-
 An initial framework of 20 rules and focus points was developed by the original authors, which were streamlined into 10 rules with assistance from Claude (Anthropic). The rules were then authored and iteratively refined by the research team. This work was supported by a grant from the Sloan Foundation to RAP (G-2025-25270).
 
 The interactive Jupyter Book with detailed examples is available at [poldracklab.org/10sr_ai_assisted_coding](https://poldracklab.org/10sr_ai_assisted_coding).
-
-All content in this reference document is derived from the original paper and remains the intellectual property of the original authors.
