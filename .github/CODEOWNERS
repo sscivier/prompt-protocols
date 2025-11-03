@@ -1,0 +1,52 @@
+# CODEOWNERS for prompt-protocols
+# 
+# This file defines code ownership and review requirements.
+# Lines are processed bottom-to-top, so more specific patterns
+# should appear later in the file.
+#
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# =============================================================================
+# DEFAULT OWNERSHIP
+# =============================================================================
+# The repository maintainer reviews all changes by default
+* @sscivier
+
+# =============================================================================
+# CRITICAL REPOSITORY FILES
+# =============================================================================
+# Core repository configuration and legal files require explicit review
+/.gitignore @sscivier
+/LICENSE @sscivier
+/CODE_OF_CONDUCT.md @sscivier
+
+# =============================================================================
+# DOCUMENTATION
+# =============================================================================
+# Core documentation that defines the project
+/README.md @sscivier
+/SETUP.md @sscivier
+/CONTRIBUTING.md @sscivier
+/ten-simple-rules-reference.md @sscivier
+
+# =============================================================================
+# PROMPT TEMPLATES
+# =============================================================================
+# All prompt templates require review to maintain quality and consistency
+/prompts/ @sscivier
+/prompts/TEMPLATES-INDEX.md @sscivier
+
+# =============================================================================
+# ASSESSMENT TOOLS
+# =============================================================================
+# Assessment frameworks are critical for prompt quality
+/assessment/ @sscivier
+
+# =============================================================================
+# GITHUB CONFIGURATION
+# =============================================================================
+# GitHub-specific configurations require careful review
+/.github/ @sscivier
+/.github/CODEOWNERS @sscivier
+/.github/pull_request_template.md @sscivier
+/.github/ISSUE_TEMPLATE/ @sscivier
