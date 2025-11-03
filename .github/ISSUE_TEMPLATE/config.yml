@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 General Question or Discussion
+    url: https://github.com/sscivier/prompt-protocols/discussions
+    about: Ask questions about using templates or share experiences with AI-assisted coding
+  - name: 📖 Template Usage Help
+    url: https://github.com/sscivier/prompt-protocols/blob/main/prompts/TEMPLATES-INDEX.md
+    about: Review the template index for guidance on which templates to use
+  - name: 📚 Ten Simple Rules Reference
+    url: https://github.com/sscivier/prompt-protocols/blob/main/ten-simple-rules-reference.md
+    about: Review the core principles underlying these templates
