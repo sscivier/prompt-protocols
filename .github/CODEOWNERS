@@ -41,7 +41,6 @@
 # =============================================================================
 # Assessment frameworks are critical for prompt quality
 /assessment/ @sscivier
-/assessment/*.md @sscivier
 
 # =============================================================================
 # GITHUB CONFIGURATION
