@@ -78,4 +78,4 @@ To cite the Bridgeford *et al.* (2025) paper, use:
 
 ## License
 
-See [LICENSE](LICENSE) for details.
+Apache-2.0. See [LICENSE](LICENSE) for details.
