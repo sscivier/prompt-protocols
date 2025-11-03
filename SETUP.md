@@ -21,7 +21,7 @@ Clone `prompt-protocols` to a central location on your system:
 
 ```bash
 # Choose a location for tools/resources (adjust path as needed)
-cd ~/Developer/phd/tools
+cd ~/path/to/tools
 
 # Clone the repository
 git clone git@github.com:sscivier/prompt-protocols.git
@@ -57,13 +57,13 @@ To integrate `prompt-protocols` into a project:
 cd ~/path/to/your-project/.github
 
 # Create symlink to prompts
-ln -s ~/Developer/phd/tools/prompt-protocols/prompts ./prompts
+ln -s ~/path/to/tools/prompt-protocols/prompts ./prompts
 
 # Create symlink to assessment tools
-ln -s ~/Developer/phd/tools/prompt-protocols/assessment ./assessment
+ln -s ~/path/to/tools/prompt-protocols/assessment ./assessment
 
 # Optional: symlink the reference document
-ln -s ~/Developer/phd/tools/prompt-protocols/ten-simple-rules-reference.md ./ten-simple-rules-reference.md
+ln -s ~/path/to/tools/prompt-protocols/ten-simple-rules-reference.md ./ten-simple-rules-reference.md
 ```
 
 **Alternative Location**: If your project doesn't have a `.github/` directory, you can create the symlinks in:
@@ -80,8 +80,8 @@ Confirm symlinks are working:
 ls -la .github/
 
 # Should show something like:
-# prompts -> /Users/you/Developer/phd/tools/prompt-protocols/prompts
-# assessment -> /Users/you/Developer/phd/tools/prompt-protocols/assessment
+# prompts -> /Users/you/path/to/tools/prompt-protocols/prompts
+# assessment -> /Users/you/path/to/tools/prompt-protocols/assessment
 
 # Verify contents are accessible
 ls .github/prompts/
@@ -130,7 +130,7 @@ When templates are updated in the central repository:
 
 ```bash
 # Navigate to central repository
-cd ~/Developer/phd/tools/prompt-protocols
+cd ~/path/to/tools/prompt-protocols
 
 # Pull latest changes
 git pull origin main
@@ -160,7 +160,7 @@ For setting up multiple projects at once, create a setup script:
 #!/bin/bash
 # setup-prompt-protocols.sh
 
-PROTOCOLS_PATH="$HOME/Developer/phd/tools/prompt-protocols"
+PROTOCOLS_PATH="$HOME/path/to/tools/prompt-protocols"
 PROJECTS=(
     "$HOME/path/to/first/project"
     "$HOME/path/to/second/project"
@@ -205,11 +205,11 @@ chmod +x setup-prompt-protocols.sh
 **Solution**: Verify the source path exists and is correct
 ```bash
 # Check if source exists
-ls ~/Developer/phd/tools/prompt-protocols/prompts
+ls ~/path/to/tools/prompt-protocols/prompts
 
 # Recreate symlink with correct path
 rm .github/prompts
-ln -s ~/Developer/phd/tools/prompt-protocols/prompts .github/prompts
+ln -s ~/path/to/tools/prompt-protocols/prompts .github/prompts
 ```
 
 ### Permission Issues
@@ -218,7 +218,7 @@ ln -s ~/Developer/phd/tools/prompt-protocols/prompts .github/prompts
 
 **Solution**: Check permissions on source directory
 ```bash
-chmod -R u+r ~/Developer/phd/tools/prompt-protocols
+chmod -R u+r ~/path/to/tools/prompt-protocols
 ```
 
 ### Git Tracking Symlinks
@@ -256,7 +256,7 @@ If you need project-specific templates:
 To pin a specific version of templates:
 
 ```bash
-cd ~/Developer/phd/tools/prompt-protocols
+cd ~/path/to/tools/prompt-protocols
 git checkout <specific-commit-or-tag>
 ```
 
@@ -277,19 +277,19 @@ All symlinked projects will use that version until you update.
 
 **One-time setup**:
 ```bash
-git clone git@github.com:sscivier/prompt-protocols.git ~/Developer/phd/tools/prompt-protocols
+git clone git@github.com:sscivier/prompt-protocols.git ~/path/to/tools/prompt-protocols
 ```
 
 **Per-project setup**:
 ```bash
 cd ~/path/to/project/.github
-ln -s ~/Developer/phd/tools/prompt-protocols/prompts ./prompts
-ln -s ~/Developer/phd/tools/prompt-protocols/assessment ./assessment
+ln -s ~/path/to/tools/prompt-protocols/prompts ./prompts
+ln -s ~/path/to/tools/prompt-protocols/assessment ./assessment
 ```
 
 **Updates**:
 ```bash
-cd ~/Developer/phd/tools/prompt-protocols && git pull
+cd ~/path/to/tools/prompt-protocols && git pull
 ```
 
 That's it! Templates are now available across all your projects and stay synchronized automatically.
