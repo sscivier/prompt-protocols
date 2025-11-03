@@ -36,4 +36,4 @@ We welcome contributions! This guide will help you get started.
 
 ## Questions?
 
-Open an issue.
+Open a [discussion](https://github.com/sscivier/prompt-protocols/discussions).
