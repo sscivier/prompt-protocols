@@ -13,12 +13,19 @@ This repository provides prompt engineering templates and guidance for scientifi
 
 2. **Symlink into your project**:
    ```bash
-   cd ~/path/to/your-project/.github
+   cd ~/path/to/your-project
+   mkdir -p ai-dev
+   cd ai-dev
    ln -s ~/path/to/tools/prompt-protocols/prompts ./prompts
    ln -s ~/path/to/tools/prompt-protocols/assessment ./assessment
    ```
 
-3. **Start using templates** - see [SETUP.md](SETUP.md) for detailed instructions.
+3. **Add to .gitignore** (if using git):
+   ```bash
+   echo "ai-dev/" >> .gitignore
+   ```
+
+4. **Start using templates** - see [SETUP.md](SETUP.md) for detailed instructions.
 
 ## What's Inside
 
@@ -48,7 +55,8 @@ Full setup instructions: [SETUP.md](SETUP.md)
 
 Key points:
 - Clone once to a central location
-- Symlink into individual projects
+- Symlink into individual projects' `ai-dev/` directory
+- Add `ai-dev/` to `.gitignore` to keep project repos clean
 - Updates propagate automatically across all projects
 
 ## Contributing

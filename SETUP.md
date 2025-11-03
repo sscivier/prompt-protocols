@@ -4,12 +4,13 @@ This guide explains how to set up `prompt-protocols` for use across multiple pro
 
 ## Overview
 
-The `prompt-protocols` repository is designed to be cloned once to a central location and symlinked into individual projects. This approach allows you to:
+The `prompt-protocols` repository is designed to be cloned once to a central location and symlinked into individual projects' `ai-dev/` directory. This approach allows you to:
 
 - Maintain one authoritative source of prompt templates and assessment tools
 - Update templates across all projects with a single `git pull`
-- Keep project repositories clean (symlinks, not copies)
-- Version control your prompt development workflow
+- Keep project repositories clean (symlinks in a local-only directory)
+- Share templates across projects without version control overhead
+- Optionally include prompt development artifacts in version control when desired
 
 ---
 
@@ -53,39 +54,67 @@ You should see:
 To integrate `prompt-protocols` into a project:
 
 ```bash
-# Navigate to your project's .github directory
-cd ~/path/to/your-project/.github
+# Navigate to your project root
+cd ~/path/to/your-project
 
-# Create symlink to prompts
+# Create ai-dev directory for prompt development resources
+mkdir -p ai-dev
+
+# Navigate into it
+cd ai-dev
+
+# Create symlinks to shared resources
 ln -s ~/path/to/tools/prompt-protocols/prompts ./prompts
-
-# Create symlink to assessment tools
 ln -s ~/path/to/tools/prompt-protocols/assessment ./assessment
 
 # Optional: symlink the reference document
 ln -s ~/path/to/tools/prompt-protocols/ten-simple-rules-reference.md ./ten-simple-rules-reference.md
 ```
 
-**Alternative Location**: If your project doesn't have a `.github/` directory, you can create the symlinks in:
-- Project root directory
-- A `docs/` directory
-- Any location that makes sense for your project structure
+### For Projects Using Git
+
+Add `ai-dev/` to your `.gitignore` to keep these local development resources out of version control:
+
+```bash
+# From project root
+echo "ai-dev/" >> .gitignore
+```
+
+**When to track prompt artifacts:** If you want to version control specific prompts or prompt development artifacts, you can:
+- Keep `ai-dev/` ignored but copy finalized prompts to a tracked location (e.g., `docs/prompts/`)
+- Create a separate tracked directory for shared prompt artifacts
+- Track specific files within `ai-dev/` using git negation patterns in `.gitignore`
 
 ### Verification
 
 Confirm symlinks are working:
 
 ```bash
-# Check symlink creation
-ls -la .github/
+# Check symlink creation (from project root)
+ls -la ai-dev/
 
 # Should show something like:
 # prompts -> /Users/you/path/to/tools/prompt-protocols/prompts
 # assessment -> /Users/you/path/to/tools/prompt-protocols/assessment
 
 # Verify contents are accessible
-ls .github/prompts/
+ls ai-dev/prompts/
 ```
+
+### For Projects Not Using Git
+
+If your project doesn't use git version control, you can still use the `ai-dev/` directory:
+
+```bash
+# Same setup as above
+cd ~/path/to/your-project
+mkdir -p ai-dev
+cd ai-dev
+ln -s ~/path/to/tools/prompt-protocols/prompts ./prompts
+ln -s ~/path/to/tools/prompt-protocols/assessment ./assessment
+```
+
+The `ai-dev/` directory is simply a convention for organizing prompt development resources - no git required.
 
 ---
 
@@ -97,10 +126,10 @@ Once symlinked, access templates directly from your project:
 
 ```bash
 # View available templates
-cat .github/prompts/TEMPLATES-INDEX.md
+cat ai-dev/prompts/TEMPLATES-INDEX.md
 
 # Open specific template
-cat .github/prompts/01-domain-research.md
+cat ai-dev/prompts/01-domain-research.md
 ```
 
 ### With AI Coding Assistants
@@ -115,7 +144,7 @@ When working with AI assistants (GitHub Copilot, Claude, etc.):
    - Reference the checklist at the end of `prompts/implementation.md` for a self-check.
    - Ask the AI assistant to assess your prompt.
    ```markdown
-   "Please assess my prompt against .github/assessment/prompt-assessment.md:
+   "Please assess my prompt against ai-dev/assessment/prompt-assessment.md:
    [INSERT PROMPT]
    "
    ```
@@ -145,7 +174,7 @@ Check that projects see the updates:
 ```bash
 # In any project with symlinks
 cd ~/path/to/your-project
-cat .github/prompts/implementation.md  # Should show latest version
+cat ai-dev/prompts/implementation.md  # Should show latest version
 ```
 
 ---
@@ -169,8 +198,9 @@ PROJECTS=(
 
 for project in "${PROJECTS[@]}"; do
     if [ -d "$project" ]; then
-        mkdir -p "$project/.github"
-        cd "$project/.github"
+        cd "$project"
+        mkdir -p ai-dev
+        cd ai-dev
         
         # Remove old symlinks if they exist
         rm -f prompts assessment ten-simple-rules-reference.md
@@ -179,6 +209,14 @@ for project in "${PROJECTS[@]}"; do
         ln -s "$PROTOCOLS_PATH/prompts" ./prompts
         ln -s "$PROTOCOLS_PATH/assessment" ./assessment
         ln -s "$PROTOCOLS_PATH/ten-simple-rules-reference.md" ./ten-simple-rules-reference.md
+        
+        # Add to .gitignore if git repo exists
+        if [ -d "$project/.git" ]; then
+            if ! grep -q "^ai-dev/$" "$project/.gitignore" 2>/dev/null; then
+                echo "ai-dev/" >> "$project/.gitignore"
+                echo "  ✓ Added ai-dev/ to .gitignore"
+            fi
+        fi
         
         echo "✓ Set up prompt-protocols in $project"
     else
@@ -208,8 +246,8 @@ chmod +x setup-prompt-protocols.sh
 ls ~/path/to/tools/prompt-protocols/prompts
 
 # Recreate symlink with correct path
-rm .github/prompts
-ln -s ~/path/to/tools/prompt-protocols/prompts .github/prompts
+rm ai-dev/prompts
+ln -s ~/path/to/tools/prompt-protocols/prompts ai-dev/prompts
 ```
 
 ### Permission Issues
@@ -221,17 +259,22 @@ ln -s ~/path/to/tools/prompt-protocols/prompts .github/prompts
 chmod -R u+r ~/path/to/tools/prompt-protocols
 ```
 
-### Git Tracking Symlinks
+### Git Tracking
 
-**Issue**: Git tries to track symlink contents instead of the symlink itself
+**Recommended approach**: Add `ai-dev/` to `.gitignore` to keep prompt development resources local.
 
-**Solution**: Ensure `.gitignore` excludes symlink targets but not the symlinks themselves. Symlinks should appear in git as symlinks, not as directories.
-
-If you want to track the symlinks themselves:
 ```bash
-# Symlinks should be staged as symlinks
-git add .github/prompts  # This stages the symlink, not the contents
+echo "ai-dev/" >> .gitignore
 ```
+
+ **If you want to track the symlinks**: Remove `ai-dev/` from `.gitignore` or use negation patterns. Git will track symlinks themselves (not their contents).
+
+```bash
+# To track symlinks
+git add ai-dev/prompts  # This stages the symlink, not the contents
+```
+
+**Note**: Tracking symlinks means other collaborators need the same `prompt-protocols` setup for the symlinks to work.
 
 ---
 
@@ -241,15 +284,19 @@ git add .github/prompts  # This stages the symlink, not the contents
 
 If you need project-specific templates:
 
-1. Keep shared templates symlinked
-2. Add custom templates directly in project
+1. Keep shared templates symlinked in `ai-dev/`
+2. Add custom templates directly in `ai-dev/`
 3. Reference both in your workflows
 
 ```
-.github/
+ai-dev/
 ├── prompts/           # Symlink to shared templates
-└── custom-prompts/    # Project-specific templates
+├── assessment/        # Symlink to shared assessment
+├── custom-prompts/    # Project-specific templates
+└── work-in-progress/  # Your prompt drafts
 ```
+
+Everything in `ai-dev/` can remain untracked if you've added it to `.gitignore`.
 
 ### Version Pinning
 
@@ -282,9 +329,12 @@ git clone git@github.com:sscivier/prompt-protocols.git ~/path/to/tools/prompt-pr
 
 **Per-project setup**:
 ```bash
-cd ~/path/to/project/.github
+cd ~/path/to/project
+mkdir -p ai-dev
+cd ai-dev
 ln -s ~/path/to/tools/prompt-protocols/prompts ./prompts
 ln -s ~/path/to/tools/prompt-protocols/assessment ./assessment
+echo "ai-dev/" >> ../.gitignore  # If using git
 ```
 
 **Updates**:
