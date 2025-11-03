@@ -228,17 +228,3 @@ The new architecture and design templates (03, 04) are particularly useful for:
 - **API design** - plan documentation that guides interface design
 
 These templates help with the "big picture" design decisions that shape how code is organized and communicated, complementing the more detailed specification templates (05-06) that focus on individual components.
-
----
-
-## Your Context
-
-As a **geophysics PhD student working on computational projects**, you'll likely find yourself:
-- Using **01-domain-research.md** to understand geophysical algorithms and data formats
-- Using **02-problem-framing.md** to decompose seismic processing or modeling tasks
-- Using **03-package-structure.md** when organizing processing pipelines into modules
-- Using **04-documentation-design.md** for README files and documenting scientific methods
-- Using **06-test-design.md** to ensure scientific correctness of implementations
-- Using **08-code-review.md** to validate AI-generated code meets domain standards
-
-The examples in each template are drawn from geophysics to be directly relevant to your work.
