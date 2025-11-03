@@ -34,7 +34,6 @@
 # =============================================================================
 # All prompt templates require review to maintain quality and consistency
 /prompts/ @sscivier
-/prompts/*.md @sscivier
 /prompts/TEMPLATES-INDEX.md @sscivier
 
 # =============================================================================
