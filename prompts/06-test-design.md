@@ -6,7 +6,7 @@ Use this template to get AI assistance with designing comprehensive test cases b
 
 ## Test Case Generation Prompt
 
-```
+```markdown
 For [function/component] that [description], help me design comprehensive test cases.
 
 Functionality:
@@ -34,7 +34,7 @@ What test cases am I likely missing for [problem type]?
 
 ## Behavioral Specification Prompt
 
-```
+```markdown
 I need to specify the behavior of [function/component] through tests.
 
 High-level requirements:
@@ -55,7 +55,7 @@ Convert requirements into test specifications that clearly define success.
 
 ## Edge Case Discovery Prompt
 
-```
+```markdown
 For [function/component] with this signature:
 [Function signature or API description]
 
@@ -82,7 +82,7 @@ Assume inputs are [data type/structure] with [characteristics].
 
 ## Test Coverage Review Prompt
 
-```
+```markdown
 Here are my current test cases for [component]:
 
 [List or paste your test cases]
@@ -102,7 +102,7 @@ Suggest additional test cases to improve coverage.
 
 ## Error Handling Test Design Prompt
 
-```
+```markdown
 For [function/component], help me design tests for error handling.
 
 Function: [signature/description]
@@ -124,7 +124,7 @@ Additional error conditions in [domain] I should test for [operation]?
 
 ## Performance Test Design Prompt
 
-```
+```markdown
 For [component] that [description], help me design performance tests.
 
 Performance requirements:
@@ -147,7 +147,7 @@ Running environment: [hardware/platform considerations]
 
 ## Test Data Design Prompt
 
-```
+```markdown
 For testing [function/component], help me design appropriate test data.
 
 What the component does: [description]
@@ -176,7 +176,7 @@ Domain: [field] - what kinds of test data are standard in this field?
 
 ## Test Infrastructure Prompt
 
-```
+```markdown
 I'm setting up testing infrastructure for [project type].
 
 Current setup:
@@ -212,7 +212,7 @@ What testing patterns are standard for [project type] in [language]?
 
 ## Assertion Design Prompt
 
-```
+```markdown
 For this test case: [describe test scenario]
 
 Help me write precise assertions:
@@ -252,7 +252,7 @@ Domain: [field - any domain-specific validation?]
 
 ## Example (Geophysics Context)
 
-```
+```markdown
 For a function that computes semblance on seismic gathers, help me design comprehensive test cases.
 
 Functionality:

@@ -6,7 +6,7 @@ Use this template to get AI assistance with managing context effectively across 
 
 ## Context Document Creation Prompt
 
-```
+```markdown
 I'm working on [project description] and need to create context documentation for AI coding sessions.
 
 Project overview:
@@ -29,7 +29,7 @@ What else should I include to give AI assistants sufficient context across sessi
 
 ## Context Pruning Prompt
 
-```
+```markdown
 My conversation with AI has gotten long and I'm seeing degraded performance.
 
 Current conversation includes:
@@ -51,7 +51,7 @@ Create a condensed context summary I can use to restart effectively.
 
 ## Problem Tracking Document Prompt
 
-```
+```markdown
 I need a structured way to track problems and solutions across AI coding sessions.
 
 Project: [name/description]
@@ -71,7 +71,7 @@ Also suggest what problems I should be tracking vs. ignoring.
 
 ## Session Restart Prompt
 
-```
+```markdown
 I'm starting a new AI coding session for [project].
 
 Previous session summary:
@@ -93,7 +93,7 @@ Generate a structured prompt I can use to start the new session effectively.
 
 ## Specification File Design Prompt
 
-```
+```markdown
 For [project/component], help me design external specification files for context management.
 
 What I need to specify:
@@ -116,7 +116,7 @@ Expected use: [how these specs will be used]
 
 ## Context Verification Prompt
 
-```
+```markdown
 I'm about to start a complex implementation. Verify I have sufficient context.
 
 What I'm implementing: [description]
@@ -136,7 +136,7 @@ Help me identify gaps before I start the implementation.
 
 ## Context Isolation Prompt
 
-```
+```markdown
 I need to work on [specific task] without polluting my main development conversation.
 
 Task: [description]
@@ -155,7 +155,7 @@ Create a standalone context summary for this isolated work session.
 
 ## Documentation-as-Context Prompt
 
-```
+```markdown
 I want to use documentation as persistent context for AI sessions.
 
 Project: [name/description]
@@ -175,7 +175,7 @@ Goal: Enable AI to understand my project from documentation alone.
 
 ## Context Handoff Prompt
 
-```
+```markdown
 I'm handing off [project/component] to another developer / future me.
 
 Current state:
@@ -210,7 +210,7 @@ This will be used as context for AI-assisted development by the next person.
 
 ## Example (Geophysics Context)
 
-```
+```markdown
 I'm working on a seismic processing pipeline and need to create context documentation for AI coding sessions.
 
 Project overview:

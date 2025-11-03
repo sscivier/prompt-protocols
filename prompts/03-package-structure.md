@@ -6,7 +6,7 @@ Use this template to get AI assistance with designing the overall structure and 
 
 ## Project Structure Design Prompt
 
-```
+```markdown
 I'm designing the structure for [project/package name] that will [purpose].
 
 Project scope:
@@ -34,7 +34,7 @@ What's the standard structure for [project type] in [language]?
 
 ## Module Decomposition Prompt
 
-```
+```markdown
 I have [complex functionality] that needs to be organized into modules.
 
 Functionality includes:
@@ -63,7 +63,7 @@ Suggest a modular architecture that's maintainable and extensible.
 
 ## Package Scaffolding Prompt
 
-```
+```markdown
 I'm creating a [Python/Julia/R] package for [purpose].
 
 Package details:
@@ -90,7 +90,7 @@ Show me the complete file tree and explain each component.
 
 ## Code Organization Refactoring Prompt
 
-```
+```markdown
 My code has grown organically and needs better organization:
 
 Current structure:
@@ -121,7 +121,7 @@ Suggest a refactoring plan with clear steps.
 
 ## Interface Design Between Modules Prompt
 
-```
+```markdown
 I'm designing interfaces between modules in [project].
 
 Modules:
@@ -146,7 +146,7 @@ Suggest interface designs and explain the architectural decisions.
 
 ## Namespace Design Prompt
 
-```
+````markdown
 I'm designing the namespace/API structure for [package].
 
 Package purpose: [what it does]
@@ -168,13 +168,13 @@ from package import ...
 Domain: [field] - what are namespace conventions in this domain?
 
 Design a clear, intuitive API structure.
-```
+````
 
 ---
 
 ## Plugin/Extension Architecture Prompt
 
-```
+```markdown
 I want [project] to support plugins/extensions.
 
 Core functionality: [what's built-in]
@@ -201,7 +201,7 @@ Design an extensible architecture with clear examples.
 
 ## Data Flow Architecture Prompt
 
-```
+```markdown
 I'm designing data flow through [system/package].
 
 System overview: [what it does]
@@ -229,7 +229,7 @@ Design a clean data flow architecture.
 
 ## Testing Structure Design Prompt
 
-```
+```markdown
 I'm designing the testing structure for [project].
 
 Project structure:
@@ -259,7 +259,7 @@ Design a maintainable test structure.
 
 ## Configuration Architecture Prompt
 
-```
+```markdown
 I'm designing configuration management for [project].
 
 Configuration needs:
@@ -298,7 +298,7 @@ Design a flexible, user-friendly configuration system.
 
 ## Example (Geophysics Context)
 
-```
+```markdown
 I'm designing the structure for a seismic data processing package that will handle loading, filtering, velocity analysis, and stacking of seismic data.
 
 Project scope:

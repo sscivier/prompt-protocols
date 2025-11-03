@@ -6,7 +6,7 @@ Use this template to get AI assistance with reviewing generated code for correct
 
 ## General Code Review Prompt
 
-```
+```markdown
 Please review this code for [component/function]:
 
 [Paste code]
@@ -31,7 +31,7 @@ Identify specific issues with line numbers and suggest improvements.
 
 ## Scientific Correctness Review Prompt
 
-```
+```markdown
 Please review this scientific computing code:
 
 [Paste code]
@@ -57,7 +57,7 @@ Is this scientifically sound for [problem] in [field]?
 
 ## Implementation vs. Specification Review Prompt
 
-```
+```markdown
 Please verify this implementation matches my specifications.
 
 **Specification:**
@@ -81,7 +81,7 @@ List any discrepancies between specification and implementation.
 
 ## Test Coverage Review Prompt
 
-```
+```markdown
 Review these tests for [component]:
 
 **Code being tested:**
@@ -105,7 +105,7 @@ What additional tests are needed to ensure correctness?
 
 ## Architecture Review Prompt
 
-```
+```markdown
 Review the architecture of this component:
 
 [Paste code or describe structure]
@@ -130,7 +130,7 @@ Suggest architectural improvements or confirm design is sound.
 
 ## Error Handling Review Prompt
 
-```
+```markdown
 Review error handling in this code:
 
 [Paste code]
@@ -152,7 +152,7 @@ What error scenarios am I missing? How could error handling be improved?
 
 ## Performance Review Prompt
 
-```
+```markdown
 Review performance characteristics of this code:
 
 [Paste code]
@@ -177,7 +177,7 @@ Suggest specific optimizations with expected impact.
 
 ## Domain Conventions Review Prompt
 
-```
+```markdown
 Review this code for adherence to [field] conventions:
 
 [Paste code]
@@ -200,7 +200,7 @@ Does this code follow [field] best practices? What would domain experts flag?
 
 ## Security & Robustness Review Prompt
 
-```
+```markdown
 Review this code for security and robustness:
 
 [Paste code]
@@ -222,7 +222,7 @@ What could go wrong? What hardening is needed?
 
 ## Code Smell Detection Prompt
 
-```
+```markdown
 Review this code for common issues and "code smells":
 
 [Paste code]
@@ -243,7 +243,7 @@ Identify issues and suggest refactoring approaches.
 
 ## Comparison Review Prompt
 
-```
+```markdown
 Compare these two implementations of [functionality]:
 
 **Implementation A:**
@@ -279,7 +279,7 @@ Which should I use and why? Or suggest a hybrid approach?
 
 ## Example (Geophysics Context)
 
-```
+````markdown
 Please review this scientific computing code:
 
 ```python
@@ -321,4 +321,4 @@ Review specifically for:
 Issues I'm concerned about: The hardcoded offset increment, the integer time calculation, whether semblance formula is right.
 
 Is this scientifically sound for semblance computation in seismic processing?
-```
+````

@@ -6,7 +6,7 @@ Use this template to get AI assistance with debugging issues (Rule 8).
 
 ## Bug Investigation Prompt
 
-```
+```markdown
 I'm encountering a bug in [component]:
 
 **Expected behavior:**
@@ -39,7 +39,7 @@ Help me:
 
 ## Unexpected Output Investigation Prompt
 
-```
+```markdown
 My code runs without errors but produces incorrect output:
 
 **Function:**
@@ -67,7 +67,7 @@ Domain context: [field] - is the output physically/scientifically plausible?
 
 ## Intermittent Bug Investigation Prompt
 
-```
+```markdown
 I have a bug that only occurs sometimes:
 
 **Bug description:**
@@ -99,7 +99,7 @@ Help me:
 
 ## Performance Bug Investigation Prompt
 
-```
+```markdown
 This code is unexpectedly slow:
 
 **Code:**
@@ -129,7 +129,7 @@ Is this algorithmic complexity or implementation issue?
 
 ## Integration Bug Investigation Prompt
 
-```
+```markdown
 Component A and Component B don't work together properly:
 
 **Component A:**
@@ -157,7 +157,7 @@ Help me:
 
 ## Silent Failure Investigation Prompt
 
-```
+```markdown
 My code fails silently - no errors but doesn't work:
 
 **Code:**
@@ -184,7 +184,7 @@ Where should I add checks to catch this failure earlier?
 
 ## Type Error Investigation Prompt
 
-```
+```markdown
 I'm getting type-related errors:
 
 **Error message:**
@@ -213,7 +213,7 @@ Should I convert types or change the function signature?
 
 ## Logic Error Investigation Prompt
 
-```
+```markdown
 The logic in this code isn't doing what I intended:
 
 **Code:**
@@ -240,7 +240,7 @@ Walk through the logic step-by-step.
 
 ## State Management Bug Prompt
 
-```
+```markdown
 Something about state is going wrong:
 
 **Code:**
@@ -270,7 +270,7 @@ Help me:
 
 ## Exception Handling Bug Prompt
 
-```
+```markdown
 Exceptions aren't being handled correctly:
 
 **Code:**
@@ -299,7 +299,7 @@ Help me:
 
 ## Numerical Accuracy Bug Prompt
 
-```
+```markdown
 I'm getting numerical accuracy issues:
 
 **Code:**
@@ -330,7 +330,7 @@ Is this a precision issue or algorithm issue?
 
 ## Concurrency Bug Investigation Prompt
 
-```
+```markdown
 I think I have a race condition or concurrency issue:
 
 **Code:**
@@ -373,7 +373,7 @@ What's the safe concurrency pattern for this use case?
 
 ## Example (Geophysics Context)
 
-```
+````markdown
 I'm encountering a bug in my NMO correction function:
 
 **Expected behavior:**
@@ -423,4 +423,4 @@ Help me:
 4. Should I be interpolating rather than nearest-neighbor sampling?
 
 Domain: Seismic processing - NMO correction should produce smooth horizontally-aligned events.
-```
+````

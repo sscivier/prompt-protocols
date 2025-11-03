@@ -6,7 +6,7 @@ Use this template to get AI assistance with framing your problem programmaticall
 
 ## Problem Decomposition Prompt
 
-```
+```markdown
 I need to solve [high-level problem description] as part of my [project type].
 
 Help me break this down programmatically:
@@ -28,7 +28,7 @@ I want to understand WHAT needs to be solved, not yet HOW to code it.
 
 ## Architecture Design Prompt
 
-```
+```markdown
 I'm designing [component/module] that will [purpose] in my [project].
 
 Please help me think through:
@@ -51,7 +51,7 @@ Help me design the structure before writing code.
 
 ## Algorithm Selection Prompt
 
-```
+```markdown
 For [specific task], I need to choose an appropriate algorithm.
 
 The problem characteristics:
@@ -74,7 +74,7 @@ Help me understand the algorithmic approach before implementation details.
 
 ## Data Flow Design Prompt
 
-```
+```markdown
 I'm working on [system/pipeline] that processes [type of data].
 
 Help me design the data flow:
@@ -97,7 +97,7 @@ Map out the data flow architecture before implementation.
 
 ## Integration Planning Prompt
 
-```
+```markdown
 I need to integrate [new functionality] into my existing [project description].
 
 Current setup:
@@ -120,7 +120,7 @@ Guide me on how this fits architecturally before implementation.
 
 ## Edge Case Identification Prompt
 
-```
+```markdown
 For [function/component] that [description], help me identify edge cases.
 
 Core functionality:
@@ -158,7 +158,7 @@ Help me think through what could go wrong before writing code.
 
 ## Example (Geophysics Context)
 
-```
+```markdown
 I need to solve stratigraphic layer correlation across seismic sections as part of my seismic interpretation project.
 
 Help me break this down programmatically:

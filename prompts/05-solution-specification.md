@@ -6,7 +6,7 @@ Use this template to get AI assistance with specifying inputs, outputs, and requ
 
 ## Input/Output Specification Prompt
 
-```
+```markdown
 For [function/component] that will [purpose], help me specify the interface.
 
 Functional goal: [what it accomplishes]
@@ -36,7 +36,7 @@ Context:
 
 ## Success Criteria Prompt
 
-```
+```markdown
 For [component] that [does X], help me define concrete success criteria.
 
 Functionality: [description]
@@ -65,7 +65,7 @@ What am I missing? What other success criteria are important for [problem type]?
 
 ## Constraint Specification Prompt
 
-```
+```markdown
 For [project/component], help me identify and specify all relevant constraints.
 
 Context: [brief description]
@@ -97,7 +97,7 @@ What constraints am I likely overlooking for [problem type]?
 
 ## Interface Design Prompt
 
-```
+```markdown
 I'm designing the interface for [component] in [project].
 
 Purpose: [what it does]
@@ -132,7 +132,7 @@ Help me design an interface that's easy to use correctly and hard to use incorre
 
 ## Dependency Analysis Prompt
 
-```
+```markdown
 For [project/component] in [language/framework], help me analyze dependencies.
 
 What I'm building: [description]
@@ -167,7 +167,7 @@ Constraints: [e.g., "must be pip-installable", "no commercial licenses"]
 
 ## Requirements Validation Prompt
 
-```
+```markdown
 Here are my requirements for [component/system]:
 
 [Paste your requirements]
@@ -208,7 +208,7 @@ Domain context: [field/application]
 
 ## Example (Geophysics Context)
 
-```
+```markdown
 For a function that will compute seismic attributes from trace data, help me specify the interface.
 
 Functional goal: Calculate various seismic attributes (instantaneous amplitude, phase, frequency) from seismic traces

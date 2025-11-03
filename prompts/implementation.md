@@ -129,7 +129,7 @@ assert function(invalid_input) raises ExpectedError
 
 ## Example Minimal Prompt (Filled Template)
 
-```markdown
+````markdown
 ## 1. Domain Context & Current Understanding
 
 **What I know:**
@@ -212,7 +212,7 @@ Please implement `compute_voxel_correlations(fmri_data, mask=None)` based on the
 **Verification:**
 - I'll run tests against synthetic data with known correlations
 - Will validate on real fMRI dataset (100 subjects) for memory/performance
-```
+````
 
 ---
 

@@ -6,7 +6,7 @@ Use this template to get AI assistance with gathering domain knowledge before im
 
 ## Basic Research Prompt
 
-```
+```markdown
 I'm working on [brief description of problem/task] in [domain/field].
 
 Please help me research:
@@ -26,7 +26,7 @@ Current context:
 
 ## Deep Dive Research Prompt
 
-```
+```markdown
 I need to understand [specific concept/technique] better for my [project description].
 
 Please provide:
@@ -48,7 +48,7 @@ I want to understand this well enough to: [your goal - e.g., "evaluate whether a
 
 ## Comparative Analysis Prompt
 
-```
+```markdown
 I'm deciding between [approach A] and [approach B] for [task] in my [project type].
 
 For each approach, please explain:
@@ -70,7 +70,7 @@ Help me understand which approach best fits my situation and why.
 
 ## Existing Implementation Review
 
-```
+```markdown
 I found this [library/implementation/approach] for [task]: [link or description]
 
 Please help me evaluate it:
@@ -99,7 +99,7 @@ My data characteristics: [description]
 
 ## Example (Geophysics Context)
 
-```
+```markdown
 I'm working on seismic velocity model interpolation for my geophysics PhD project.
 
 Please help me research:

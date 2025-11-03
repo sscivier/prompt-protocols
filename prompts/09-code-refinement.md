@@ -6,7 +6,7 @@ Use this template to get AI assistance with improving working code incrementally
 
 ## Targeted Refactoring Prompt
 
-```
+```markdown
 I want to refactor this code to improve [specific aspect]:
 
 [Paste code]
@@ -27,7 +27,7 @@ Show the refactored version and explain the changes.
 
 ## Performance Optimization Prompt
 
-```
+```markdown
 This code works correctly but is too slow:
 
 [Paste code]
@@ -57,7 +57,7 @@ Suggest specific optimizations and expected improvements.
 
 ## Readability Improvement Prompt
 
-```
+```markdown
 This code works but is hard to understand:
 
 [Paste code]
@@ -83,7 +83,7 @@ Show improved version with explanation of changes.
 
 ## Modularity Improvement Prompt
 
-```
+```markdown
 This code is monolithic and needs better modularity:
 
 [Paste code]
@@ -109,7 +109,7 @@ Suggest a modular structure and implement it.
 
 ## Error Handling Enhancement Prompt
 
-```
+```markdown
 This code works for happy path but error handling needs improvement:
 
 [Paste code]
@@ -136,7 +136,7 @@ Don't change core logic, only improve error handling.
 
 ## Type Safety Improvement Prompt
 
-```
+```markdown
 Add type hints and improve type safety for this code:
 
 [Paste code]
@@ -161,7 +161,7 @@ Show improved version and any type-related issues found.
 
 ## Documentation Enhancement Prompt
 
-```
+```markdown
 This code needs better documentation:
 
 [Paste code]
@@ -186,7 +186,7 @@ Don't change code, only add/improve documentation.
 
 ## Test Improvement Prompt
 
-```
+```markdown
 These tests work but need improvement:
 
 [Paste tests]
@@ -212,7 +212,7 @@ Show improved test suite.
 
 ## Interface Simplification Prompt
 
-```
+```markdown
 This API works but is too complicated:
 
 [Paste interface/function signatures]
@@ -239,7 +239,7 @@ Suggest simplified interface and migration path if breaking.
 
 ## Code Consolidation Prompt
 
-```
+```markdown
 I have similar code in multiple places that should be consolidated:
 
 **Instance 1:**
@@ -267,7 +267,7 @@ Where should the consolidated code live? [in what module/class]
 
 ## Dependency Reduction Prompt
 
-```
+```markdown
 This code has too many dependencies:
 
 [Paste code]
@@ -292,7 +292,7 @@ Suggest approach to reduce dependencies while maintaining functionality.
 
 ## Design Pattern Application Prompt
 
-```
+```markdown
 This code could benefit from a design pattern:
 
 [Paste code]
@@ -318,7 +318,7 @@ Context:
 
 ## Naming Improvement Prompt
 
-```
+```markdown
 Help me improve naming in this code:
 
 [Paste code]
@@ -355,7 +355,7 @@ Existing conventions: [any project-specific naming patterns]
 
 ## Example (Geophysics Context)
 
-```
+````markdown
 This code works correctly but is too slow:
 
 ```python
@@ -390,4 +390,4 @@ Constraints:
 The current implementation calls compute_semblance() in a loop, and each call iterates over all samples and traces. Can we vectorize this or compute all velocities at once?
 
 Suggest specific optimizations and expected improvements.
-```
+````

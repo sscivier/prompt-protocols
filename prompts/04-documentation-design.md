@@ -6,7 +6,7 @@ Use this template to get AI assistance with designing documentation structure an
 
 ## Documentation Strategy Prompt
 
-```
+```markdown
 I'm planning documentation for [project/package].
 
 Project overview:
@@ -34,7 +34,7 @@ What documentation is essential vs. nice-to-have for [project type]?
 
 ## README Design Prompt
 
-```
+```markdown
 I'm writing a README for [project].
 
 Project details:
@@ -62,7 +62,7 @@ Design a README that helps users quickly understand and use the project.
 
 ## API Documentation Design Prompt
 
-```
+```markdown
 I'm documenting the API for [package/module].
 
 API overview:
@@ -90,7 +90,7 @@ Show me what good API documentation looks like for this.
 
 ## Tutorial/Guide Content Planning Prompt
 
-```
+```markdown
 I need to create tutorials/guides for [project].
 
 What users need to learn:
@@ -120,7 +120,7 @@ Design a tutorial series that brings users from beginner to proficient.
 
 ## Scientific Documentation Design Prompt
 
-```
+```markdown
 I'm documenting scientific software for [project].
 
 Scientific context:
@@ -151,7 +151,7 @@ Design documentation that meets scientific standards while remaining accessible.
 
 ## Documentation Site Structure Prompt
 
-```
+```markdown
 I'm creating a documentation website for [project] using [tool - e.g., Sphinx, MkDocs, etc.].
 
 Project scale: [size and complexity]
@@ -179,7 +179,7 @@ Design a site structure that serves different user needs.
 
 ## Example Documentation Planning Prompt
 
-```
+```markdown
 I need to plan examples and code samples for [project].
 
 Project: [description]
@@ -207,7 +207,7 @@ Design an example set that demonstrates key functionality effectively.
 
 ## Docstring Standards Prompt
 
-```
+```markdown
 I need consistent docstring standards for [project].
 
 Project context:
@@ -238,7 +238,7 @@ Show me docstring templates for each function type.
 
 ## Inline Comment Strategy Prompt
 
-```
+```markdown
 I need a strategy for inline comments in [project].
 
 Current situation:
@@ -267,7 +267,7 @@ Design a comment strategy that adds value without clutter.
 
 ## Documentation Maintenance Strategy Prompt
 
-```
+```markdown
 I need a strategy to keep documentation updated as [project] evolves.
 
 Current challenges:
@@ -296,7 +296,7 @@ Design a sustainable documentation maintenance approach.
 
 ## Contributing Documentation Prompt
 
-```
+```markdown
 I want to create contributor documentation for [project].
 
 Project context:
@@ -323,7 +323,7 @@ Design contributor documentation that welcomes and guides contributors.
 
 ## Documentation Review Prompt
 
-```
+```markdown
 Please review my documentation plan/content:
 
 [Paste documentation outline or content]
@@ -362,7 +362,7 @@ Suggest improvements and identify gaps.
 
 ## Example (Geophysics Context)
 
-```
+```markdown
 I'm planning documentation for a seismic data processing package.
 
 Project overview:
