@@ -61,6 +61,47 @@ Suggest a modular architecture that's maintainable and extensible.
 
 ---
 
+## Module Design Prompt
+
+```markdown
+I'm designing a new module for [existing/in-development package name].
+
+Module purpose: [what this module will do]
+
+Package context:
+- Current structure: [brief description of existing package organization]
+- Related modules: [modules this will interact with]
+- Package conventions: [naming, testing, documentation patterns already established]
+
+Module requirements:
+- **Core functionality**: [what the module must do]
+- **Key classes/functions**: [main components you anticipate]
+- **Data inputs/outputs**: [what data flows in and out]
+- **Dependencies**: [what this module will depend on - internal and external]
+- **Users**: [who will use this module - end users, other modules, both]
+
+Help me design this module:
+1. **File structure**: What files should the module contain?
+2. **Internal organization**: How to structure code within the module?
+3. **Public API**: What should be exposed vs. kept internal?
+4. **Integration points**: How should this connect with existing modules?
+5. **Testing strategy**: What test files/structure for this module?
+6. **Documentation needs**: What docs are needed? (docstrings, README, examples)
+7. **Configuration**: Any module-specific config or constants?
+
+Constraints:
+- [What patterns must match existing code]
+- [What dependencies to avoid]
+- [Performance or compatibility requirements]
+
+Language: [language and version]
+Package style: [e.g., "follows scikit-learn API patterns", "functional style"]
+
+Design a module that integrates cleanly and follows package conventions.
+```
+
+---
+
 ## Package Scaffolding Prompt
 
 ```markdown
